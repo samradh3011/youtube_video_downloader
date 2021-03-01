@@ -19,13 +19,12 @@ if youtube_url != '':
         # download the highest quality video
         filters.get_highest_resolution().download(output_path='C://Users//Public//high_resolution_videos_st//', filename=f'{yt_obj.title[0:5]}')
         st.header('Video Downloaded Successfully')
-        st.subheader('Downloaded in ***C:/Users/Public/high_resolution_videos_st/***')
         st.sidebar.write(f'Video Title: **{yt_obj.title}**')
         st.sidebar.write(f'Video Length: **{yt_obj.length}** Seconds')
         st.sidebar.write(f'Video View Count: **{yt_obj.views}**')
         st.sidebar.write(f'Video Uploaded by: **{yt_obj.author}**')
         video = st.video(f'C://Users//Public//high_resolution_videos_st//{yt_obj.title[0:5]}.mp4')
-        st.write('**Note**: to download somewhere else, click on ⋮ and click download')
+        st.write('**Note**: to download, click on ⋮ and click download')
         st.balloons()
     except Exception as e:
         st.write(e)
